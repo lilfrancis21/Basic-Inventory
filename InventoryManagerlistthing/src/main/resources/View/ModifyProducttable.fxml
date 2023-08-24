@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="934.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ModifyProductController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="25.0">
+         <children>
+            <Label layoutX="32.0" layoutY="18.0" prefHeight="111.0" prefWidth="183.0" text="Modify Product">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="121.0" text="ID" />
+            <Label layoutX="23.0" layoutY="157.0" prefHeight="25.0" prefWidth="32.0" text="Name" />
+            <Label layoutX="14.0" layoutY="199.0" text="Inventory" />
+            <Label layoutX="32.0" layoutY="242.0" text="Price" />
+            <Label layoutX="34.0" layoutY="279.0" text="Max" />
+            <TableView fx:id="ModProdPartTable" layoutX="338.0" layoutY="56.0" prefHeight="240.0" prefWidth="494.0">
+              <columns>
+                <TableColumn fx:id="PartIDCol" prefWidth="101.0" text="Part ID" />
+                <TableColumn fx:id="PartNameCol" minWidth="0.0" prefWidth="120.0" text="Part Name" />
+                  <TableColumn fx:id="ModPartInvCol" minWidth="0.0" prefWidth="152.0" text="Inventory Level" />
+                  <TableColumn fx:id="ModProdPrice" minWidth="0.0" prefWidth="120.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="ModProdSecondTable" layoutX="338.0" layoutY="341.0" prefHeight="225.0" prefWidth="494.0">
+               <columns>
+                  <TableColumn fx:id="SecondTableIDCol" prefWidth="101.0" text="Part ID" />
+                  <TableColumn fx:id="SecondPartNameCol" minWidth="0.0" prefWidth="122.0" text="Part Name" />
+                  <TableColumn fx:id="SecondInvLVL" prefWidth="152.0" text="Inventory Level" />
+                  <TableColumn fx:id="SecondTablePrice" prefWidth="118.0" text="Price per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="addpartbutton" layoutX="532.0" layoutY="18.0" mnemonicParsing="false" onAction="#OnActionAddPress" prefHeight="25.0" prefWidth="64.0" text="Add" />
+            <Button fx:id="modsaveprodbutton" layoutX="521.0" layoutY="570.0" mnemonicParsing="false" onAction="#OnActionSavePress" prefHeight="25.0" prefWidth="64.0" text="Save" />
+            <Button fx:id="modprodcancelbutton" layoutX="622.0" layoutY="570.0" mnemonicParsing="false" onAction="#OnActionCancelPress" prefHeight="25.0" prefWidth="64.0" text="Cancel" />
+            <Button fx:id="deletemodpartbutton" layoutX="753.0" layoutY="570.0" mnemonicParsing="false" onAction="#OnActionDeleteSecondTablePart" prefHeight="25.0" prefWidth="86.0" text="Delete part" />
+            <TextField fx:id="ModProdIDField" layoutX="73.0" layoutY="117.0" />
+            <TextField fx:id="InsertNameModProd" layoutX="73.0" layoutY="157.0" />
+            <TextField fx:id="InsertInventoryModProd" layoutX="72.0" layoutY="195.0" prefHeight="25.0" prefWidth="64.0" />
+            <TextField fx:id="InsertPriceModProd" layoutX="72.0" layoutY="238.0" prefHeight="25.0" prefWidth="64.0" />
+            <TextField fx:id="InsertMaxModProd" layoutX="72.0" layoutY="275.0" prefHeight="25.0" prefWidth="64.0" />
+            <TextField fx:id="PartSearcherField" layoutX="683.0" layoutY="18.0" promptText="Search by Part ID or Name" />
+            <TextField fx:id="InsertMinModProd" layoutX="192.0" layoutY="275.0" prefHeight="25.0" prefWidth="64.0" />
+            <Label layoutX="155.0" layoutY="279.0" text="Min" />
+            <Button fx:id="ModProdSearch" layoutX="609.0" layoutY="18.0" mnemonicParsing="false" onAction="#OnActionSearchButton" text="Search" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

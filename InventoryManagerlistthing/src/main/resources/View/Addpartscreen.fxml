@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0"
+            prefWidth="711.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.AddPartController">
+   <Label layoutX="59.0" layoutY="34.0" prefHeight="70.0" prefWidth="197.0" text="Add Part">
+      <font>
+         <Font name="System Bold" size="24.0"/>
+      </font>
+   </Label>
+   <RadioButton fx:id="AddPartInHouseRadio" layoutX="267.0" layoutY="39.0" mnemonicParsing="false"
+                onAction="#AddPartRadioInHousePress" prefHeight="60.0" prefWidth="128.0" selected="true"
+                text="In-House">
+      <toggleGroup>
+         <ToggleGroup fx:id="Options"/>
+      </toggleGroup>
+   </RadioButton>
+   <RadioButton fx:id="AddPartOutSourcedRadio" layoutX="395.0" layoutY="39.0" mnemonicParsing="false"
+                onAction="#AddPartOutSourcedPress" prefHeight="60.0" prefWidth="128.0" text="OutSourced"
+                toggleGroup="$Options"/>
+   <Label layoutX="99.0" layoutY="124.0" text="ID">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="81.0" layoutY="163.0" text="Name">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="59.0" layoutY="206.0" text="Inventory">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="57.0" layoutY="244.0" text="Price/Cost">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label layoutX="93.0" layoutY="285.0" text="Max">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <Label fx:id="AddPartMachCompany" layoutX="45.0" layoutY="332.0" text="Machine ID"/>
+   <Label layoutX="313.0" layoutY="285.0" text="Min">
+      <font>
+         <Font size="14.0"/>
+      </font>
+   </Label>
+   <TextField fx:id="AddPartIDField" layoutX="137.0" layoutY="122.0" promptText="auto gen disable"/>
+   <TextField fx:id="AddPartNameField" layoutX="137.0" layoutY="161.0" promptText="Item name "/>
+   <TextField fx:id="AddPartInvField" layoutX="137.0" layoutY="204.0" promptText="number value"/>
+   <TextField fx:id="AddPartPriceCostField" layoutX="137.0" layoutY="242.0" promptText="number value"/>
+   <TextField fx:id="AddPartMax" layoutX="137.0" layoutY="282.0" promptText="number #"/>
+   <TextField fx:id="AddPartMin" layoutX="356.0" layoutY="282.0" promptText="number #"/>
+   <TextField fx:id="AddPartMachineText" layoutX="137.0" layoutY="328.0" promptText="number #"/>
+   <Button fx:id="addpartsavebutton" layoutX="247.0" layoutY="408.0" mnemonicParsing="false"
+           onAction="#AddPartSavePress" prefHeight="32.0" prefWidth="87.0" text="Save"/>
+   <Button fx:id="addpartcancelbutton" layoutX="375.0" layoutY="408.0" mnemonicParsing="false"
+           onAction="#AddPartCancelPress" prefHeight="32.0" prefWidth="87.0" text="Cancel"/>
+</AnchorPane>
